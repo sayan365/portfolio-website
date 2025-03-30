@@ -37,9 +37,19 @@
               target="_blank">View My Resume</a>
           </div>
         </div>
-        <div class="md:w-1/2">
-          <img src="profile-pic.png" alt="Sayan Das" class="rounded-full mx-auto" width="300" height="300">
-        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative w-[300px] h-[300px] rounded-full overflow-hidden" id="profile-container">
+              <!-- Profile Image -->
+              <img src="profile-pic.png" alt="Sayan Das" id="profile-img"
+                  class="rounded-full mx-auto object-cover  top-0 left-0 " width="300" height="300" >
+              <!-- Profile Video -->
+              <video id="profile-video" class="rounded-full w-full h-full object-cover top-0 left-0 hidden"
+                  muted >
+                  <source src="profile-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+      </div>
       </div>
     </section>
 
@@ -154,28 +164,28 @@
         <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold">HTML</h3>
+            <h3 class="text-xl font-bold skill" data-tooltip="Used to structure web pages">HTML</h3>
           </div>
           <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold">CSS (Tailwind)</h3>
+            <h3 class="text-xl font-bold skill" data-tooltip="Styles web pages and makes them look beautiful">CSS (Tailwind)</h3>
           </div>
           <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold">JavaScript</h3>
+            <h3 class="text-xl font-bold skill" data-tooltip="Adds interactivity and makes websites dynamic">JavaScript</h3>
           </div>
           <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold">React</h3>
+            <h3 class="text-xl font-bold skill" data-tooltip="A library for building modern web apps">React</h3>
           </div>
           <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold">Next.js</h3>
+            <h3 class="text-xl font-bold skill" data-tooltip="Used to build full-stack web apps">Next.js</h3>
           </div>
           <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold">PHP</h3>
+            <h3 class="text-xl font-bold skill" data-tooltip="A backend language for dynamic websites">PHP</h3>
           </div>
           <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold">SQL</h3>
+            <h3 class="text-xl font-bold skill" data-tooltip="Used to manage and store website data">SQL</h3>
           </div>
           <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold">Git & GitHub</h3>
+            <h3 class="text-xl font-bold skill" data-tooltip="Helps in version control and code collaboration">Git & GitHub</h3>
           </div>
         </div>
       </div>

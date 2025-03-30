@@ -1,8 +1,59 @@
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+}
 
-  .project-card:hover {
+.project-card:hover {
     transform: translateY(-10px) rotate3d(1, 1, 10, 5deg);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#profile-video{
+  width: 300px;
+  height: 300px;
+} 
+
+.skill {
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+ 
+.skill::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+}
+
+.skill:hover::after {
+  opacity: 1;
+  visibility: visible;
+} 
+
+@media (max-width: 768px) { /* Hide tooltip for screens smaller than 768px */
+  .skill {
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
   }
+   
+  .skill::after {
+    display: none;
+  }
+  
+  .skill:hover::after {
+    display: none;
+  } 
+}
