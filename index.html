@@ -4,253 +4,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sayan Das - Web Developer Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Sayan Das | Web Developer</title>
+
+  <!-- Meta Tags for SEO -->
+  <meta name="description"
+    content="Portfolio of Sayan Das, a Web Developer specializing in React, Next.js, and modern web technologies.">
+  <meta name="keywords" content="Sayan Das, Web Developer, Portfolio, React, Next.js, PHP, Web Design">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-100">
-  <header class="bg-white shadow-md">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold">Sayan Das</div>
-      <ul class="flex space-x-4">
-        <li><a href="#about" class="text-gray-700 hover:text-blue-600">About</a></li>
-        <li><a href="#skills" class="text-gray-700 hover:text-blue-600">Skills</a></li>
-        <li><a href="#projects" class="text-gray-700 hover:text-blue-600">Projects</a></li>
-        <li><a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Sayan.</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="hero" class="bg-blue-600 text-white py-20">
-      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 mb-8 md:mb-0">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to My Portfolio</h1>
-          <p class="text-xl mb-6">I'm Sayan Das, a passionate web developer creating amazing digital experiences.</p>
-          <div class="gap-4">
-            <a href="#projects"
-              class="bg-white text-blue-600 py-1.5 px-5 rounded-full font-bold hover:bg-blue-100 transition duration-300 inline-block">View
-              My Work</a>
-            <a href="https://docs.google.com/document/d/1Zf4UXdijkiSD_PQWhw_3HjuIFKa0snel/edit?usp=sharing&ouid=103492002995117443176&rtpof=true&sd=true"
-              class="bg-blue-900 text-white py-1.5 px-5 rounded-full font-bold hover:bg-blue-800 transition duration-300 border-2 border-white inline-block"
-              target="_blank">View My Resume</a>
-          </div>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
         </div>
-        <div class="md:w-1/2 flex justify-center">
-          <div class="relative w-[300px] h-[300px] rounded-full overflow-hidden" id="profile-container">
-              <!-- Profile Image -->
-              <img src="profile-pic.png" alt="Sayan Das" id="profile-img"
-                  class="rounded-full mx-auto object-cover  top-0 left-0 " width="300" height="300" >
-              <!-- Profile Video -->
-              <video id="profile-video" class="rounded-full w-full h-full object-cover top-0 left-0 hidden"
-                  muted >
-                  <source src="profile-video.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-          </div>
-      </div>
-      </div>
-    </section>
-
-    <!-- ----------------------------------------------------------------------------------------- -->
-
-    <section id="about" class="py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
-        <div class="flex flex-col md:flex-row items-center">
-          <div class="md:w-1/2 mb-8 md:mb-0">
-            <img src="image.jpeg" alt="About Sayan Das" class="rounded-lg shadow-lg mx-auto" width="400" height="300">
-          </div>
-          <div class="md:w-1/2 md:pl-8">
-            <p class="text-lg mb-4">
-              Hi, I'm Sayan Das, a passionate web developer and entrepreneur from Chakdaha, West Bengal. Currently
-              pursuing a Bachelor of Computer Applications (BCA) at Swami Vivekananda University, I specialize in
-              JavaScript, PHP, SQL, C, C++, C#, and frontend technologies like HTML, CSS (Tailwind), and React.
-            </p>
-            <p class="text-lg mb-4">
-              Beyond development, I am actively building Tazila, a hyper-local quick commerce startup that collaborates
-              with local stores to deliver products within 30 minutes, solving the problem of delayed e-commerce
-              deliveries.
-            </p>
-            <p class="text-lg">
-              I thrive on problem-solving, performance optimization, and creating impactful digital solutions. Whether
-              it's building scalable applications or launching innovative startups, I am always eager to explore new
-              opportunities and push boundaries.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          <div class="bg-white shadow-md p-4 rounded-lg cursor-pointer project-card" 
-            data-title="Plant Research Application"
-            data-description="An application for identifying plant species based on uploaded or captured images."
-            data-technologies="Technologies: React, Next.js, API Integration"
-            data-image="https://i.ibb.co/ZRfhTR2m/image.png?text=Plant+Research"
-            data-github="https://github.com/sayan365/Plant-Identifier"
-            data-live="https://replant.vercel.app/" 
-            onclick="openModal(this)">
-            <h3 class="text-2xl font-bold mb-2">Plant Research Application</h3>
-            <p class="text-gray-700 mb-2">
-              An application for identifying plant species based on uploaded or captured images.
-            </p>
-            <p class="text-gray-600">Technologies: React, Next.js, API Integration</p>
-            <a class="text-blue-600 hover:underline">View Project</a>
-          </div>
-
-          <div class="bg-white shadow-md p-4 rounded-lg cursor-pointer project-card" 
-            data-title="Student Management System"
-            data-description="A system for managing student data such as attendance, marks, and subjects."
-            data-technologies="Technologies: PHP, MySQL, HTML/CSS, JavaScript"
-            data-image="https://i.ibb.co/JF88X1qK/image.png?text=Student+Management"
-            data-github="https://github.com/sayan365/student-management-system"
-            data-live="https://github.com/sayan365/student-management-system/blob/main/README.md" 
-            onclick="openModal(this)">
-            <h3 class="text-2xl font-bold mb-2">Student Management System</h3>
-            <p class="text-gray-700 mb-2">
-              A system for managing student data such as attendance, marks, and subjects.
-            </p>
-            <p class="text-gray-600">Technologies: PHP, MySQL, HTML/CSS, JavaScript</p>
-            <a class="text-blue-600 hover:underline">View Project</a>
-          </div>
-
-          <div class="bg-white shadow-md p-4 rounded-lg cursor-pointer project-card" 
-            data-title="Tic Tac Toe Game"
-            data-description="A classic Tic Tac Toe game with an interactive and responsive UI, built for seamless gameplay experience."
-            data-technologies="Technologies: HTML, CSS, JavaScript"
-            data-image="https://i.ibb.co/rGJd6nNv/image.png?text=Tic+Tac+Toe"
-            data-github="https://github.com/sayan365/Tic-Tac-Toe" 
-            data-live="https://tic-tac-toe-3000.netlify.app/"
-            onclick="openModal(this)">
-            <h3 class="text-2xl font-bold mb-2">Tic Tac Toe Game</h3>
-            <p class="text-gray-700 mb-2">
-              A classic Tic Tac Toe game with an interactive and responsive UI, built for seamless gameplay experience.
-            </p>
-            <p class="text-gray-600">Technologies: HTML, CSS, JavaScript</p>
-            <a class="text-blue-600 hover:underline">View Project</a>
-          </div>
-
-          <div class="bg-white shadow-md p-4 rounded-lg cursor-pointer project-card" 
-            data-title="Personal Portfolio Website"
-            data-description="A responsive portfolio website showcasing my projects and skills."
-            data-technologies="Technologies: HTML, Tailwind CSS, JavaScript"
-            data-image="https://i.ibb.co/zT8tP70C/image.png?text=Portfolio"
-            data-github="https://github.com/sayan365/portfolio-website" 
-            data-live="https://sayan-das.netlify.app/"
-            onclick="openModal(this)">
-            <h3 class="text-2xl font-bold mb-2">Personal Portfolio Website</h3>
-            <p class="text-gray-700 mb-2">
-              A responsive portfolio website showcasing my projects and skills.
-            </p>
-            <p class="text-gray-600">Technologies: HTML, Tailwind CSS, JavaScript</p>
-            <a class="text-blue-600 hover:underline">View Project</a>
-          </div>
-
-
-          <!-- Add more project cards similarly... -->
-
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="bg-gray-200 py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold skill" data-tooltip="Used to structure web pages">HTML</h3>
-          </div>
-          <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold skill" data-tooltip="Styles web pages and makes them look beautiful">CSS (Tailwind)</h3>
-          </div>
-          <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold skill" data-tooltip="Adds interactivity and makes websites dynamic">JavaScript</h3>
-          </div>
-          <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold skill" data-tooltip="A library for building modern web apps">React</h3>
-          </div>
-          <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold skill" data-tooltip="Used to build full-stack web apps">Next.js</h3>
-          </div>
-          <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold skill" data-tooltip="A backend language for dynamic websites">PHP</h3>
-          </div>
-          <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold skill" data-tooltip="Used to manage and store website data">SQL</h3>
-          </div>
-          <div class="bg-white text-black p-4 rounded-lg text-center border-2 border-blue-500">
-            <h3 class="text-xl font-bold skill" data-tooltip="Helps in version control and code collaboration">Git & GitHub</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="bg-blue-600 text-white py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Contact</h2>
-        <form action="https://getform.io/f/broywwka" method="POST" class="max-w-lg mx-auto">
-          <div class="mb-4">
-            <label for="name" class="block text-lg font-bold mb-2">Name</label>
-            <input type="text" id="name" name="name"
-              class="w-full px-4 py-2 rounded-lg bg-gray-100 text-gray-800 focus:outline-none focus:bg-white" required>
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block text-lg font-bold mb-2">Email</label>
-            <input type="email" id="email" name="email"
-              class="w-full px-4 py-2 rounded-lg bg-gray-100 text-gray-800 focus:outline-none focus:bg-white" required>
-          </div>
-          <div class="mb-4">
-            <label for="message" class="block text-lg font-bold mb-2">Message</label>
-            <textarea id="message" name="message" rows="4"
-              class="w-full px-4 py-2 rounded-lg bg-gray-100 text-gray-800 focus:outline-none focus:bg-white"
-              required></textarea>
-          </div>
-          <button type="submit"
-            class="w-full bg-white text-blue-600 py-2 px-6 rounded-full font-bold hover:bg-blue-100 transition duration-300">Send
-            Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-  <footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-center md:text-left">&copy; 2025 Sayan Das. All rights reserved.</p>
-      <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="https://www.linkedin.com/in/sayan360" target="_blank"
-          class="text-gray-400 hover:text-white">LinkedIn</a>
-        <a href="https://github.com/sayan365/" target="_blank" class="text-gray-400 hover:text-white">GitHub</a>
-        <a href="mailto:sayandasd90@gmail.com" class="text-gray-400 hover:text-white">Email</a>
       </div>
     </div>
-  </footer>
+  </nav>
 
-  <!-- Modal Overlay -->
-  <div id="projectModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-    <!-- Modal Content -->
-    <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
-      <!-- Close Button (top-right corner) -->
-      <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl font-bold"
-        onclick="closeModal()">&times;</button>
-
-      <!-- Modal Body -->
-      <h2 id="modalTitle" class="text-2xl font-bold mb-4"></h2>
-      <img id="modalImage" class="w-full h-48 object-cover rounded-lg mb-4" src="" alt="Project Image">
-      <p id="modalDescription" class="text-gray-700 mb-1"></p>
-      <p id="modalTechnologies" class="text-gray-700 mb-4"></p>
-
-      <div class="flex gap-4">
-        <a id="githubLink" href="#" target="_blank" class="bg-gray-900 text-white py-2 px-4 rounded-lg">GitHub</a>
-        <a id="liveLink" href="#" target="_blank" class="bg-blue-600 text-white py-2 px-4 rounded-lg">Live Demo</a>
-      </div>
-    </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <i class="fas fa-times close-menu"></i>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link">Contact</a>
   </div>
 
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in-up">
+        <span class="greeting">Hello, I'm</span>
+        <h1 class="name">Sayan Das</h1>
+        <p class="tagline">Building digital experiences that matter.</p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="https://docs.google.com/document/d/1Zf4UXdijkiSD_PQWhw_3HjuIFKa0snel/edit?usp=sharing"
+            target="_blank" class="btn btn-secondary">Resume</a>
+        </div>
+      </div>
+      <div class="hero-image fade-in-up delay-200">
+        <div class="img-wrapper" id="profile-container">
+          <img src="profile-pic.png" alt="Sayan Das" id="profile-img">
+          <video id="profile-video" loop muted playsinline
+            style="display: none; width: 100%; height: 100%; object-fit: cover;">
+            <source src="profile-video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title fade-in">About Me</h2>
+      <div class="about-content">
+        <div class="about-text fade-in">
+          <p>
+            I'm a Web Developer based in Nadia, India, with a passion for building functional and aesthetic digital
+            solutions.
+            Currently pursuing my BCA at Swami Vivekananda University, I blend academic knowledge with practical
+            experience in both frontend and backend development.
+          </p>
+          <p>
+            My journey involves working with technologies like <strong>React, Next.js, Node.js, PHP, and SQL</strong>.
+            I love solving complex problems, from building plant identification apps to creating secure CLI tools.
+            I'm always eager to learn new technologies and contribute to impactful projects.
+          </p>
+
+          <div class="skills-wrapper">
+            <h3>Tech Stack</h3>
+            <div class="skills-grid">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Tailwind</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">C/C++</span>
+              <span class="skill-tag">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2 class="section-title fade-in">Selected Work</h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card fade-in">
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="project-title">Plant Research App</h3>
+              <div class="project-links">
+                <a href="https://github.com/sayan365/Plant-Identifier" target="_blank" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+                <a href="https://meplant.vercel.app/" target="_blank" aria-label="Live Demo"><i
+                    class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <p class="project-desc">
+              An AI-powered application that identifies plant species from images. Features seamless API integration and
+              a modern interface.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Next.js</span>
+              <span>API</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card fade-in delay-100">
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="project-title">leak-proof CLI</h3>
+              <div class="project-links">
+                <a href="https://github.com/sayan365/leak-proof" target="_blank" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+                <a href="https://www.npmjs.com/package/leak-proof" target="_blank" aria-label="NPM"><i
+                    class="fab fa-npm"></i></a>
+              </div>
+            </div>
+            <p class="project-desc">
+              Zero-config CLI tool to prevent secret leaks in Git. Scans staged files for sensitive keys and
+              automatically installs hooks.
+            </p>
+            <div class="project-tech">
+              <span>Node.js</span>
+              <span>Git Hooks</span>
+              <span>Commander</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card fade-in delay-200">
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="project-title">InvoicePro</h3>
+              <div class="project-links">
+                <a href="https://github.com/sayan365/invoicepro" target="_blank" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <p class="project-desc">
+              SaaS-ready billing system. Generate PDF invoices with custom branding, manage clients, and track payments
+              specifically involved with PHP & MySQL.
+            </p>
+            <div class="project-tech">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Tailwind</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card fade-in delay-300">
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="project-title">Student Management</h3>
+              <div class="project-links">
+                <a href="https://github.com/sayan365/student-management-system" target="_blank" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <p class="project-desc">
+              Comprehensive dashboard for managing student attendance, marks, and profiles with real-time data handling.
+            </p>
+            <div class="project-tech">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JS</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title fade-in">Get In Touch</h2>
+      <div class="contact-wrapper fade-in">
+        <p class="contact-text">
+          I'm currently available for freelance work and open to new opportunities.
+          If you have a project in mind or just want to say hi, feel free to connect!
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:sayandasd90@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sayan360" target="_blank" class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/sayan365" target="_blank" class="contact-item">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="#" class="contact-item"> <!-- Twitter Placeholder -->
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Sayan Das. Built with valid code.</p>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>
